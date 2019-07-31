@@ -1,0 +1,46 @@
+{
+  "name": "secondhackathon",
+  "homepage": "./",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.3.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-dropzone": "^9.0.0",
+    "react-geocode": "^0.1.2",
+    "react-image": "^2.0.0",
+    "react-progressive-image-loading": "^3.0.3",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "latest",
+    "react-select": "^2.4.1",
+    "react-swipe-component": "^3.0.0",
+    "react-swipeable-views": "^0.13.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && rm -rf www && mv build www",
+    "lint": "eslint src",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "deploy": "yarn build && rm ./www/static/js/*.map && firebase deploy",
+    "deployWindows": "yarn build && del www\\static\\js\\*.map && firebase deploy",
+    "android": "yarn build && cordova run android",
+    "ios": "yarn build && cordova run ios"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
